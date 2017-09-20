@@ -1,0 +1,55 @@
+.2345678901234567890123456789
+COPY     START    0
+FIRST    LDA      =0
+         LDB     #LENGTH
+         BASE     LENGTH
+CLOOP   +JSUB     RDREC
+         LDA      LENGTH
+         COMP    #0
+         JEQ      ENDFIL
+        +JSUB     WRREC
+         J        CLOOP
+     org    
+jglljmk          base     
+  djgkhn       nobase     hddkgbkv
+ENDFIL  +LDA      100
+         STA      BUFFER
+         LDA     #3
+         STA      LENGTH
+        +JSUB     WRREC
+         J       @RETADR
+kjhfg	LTORG	  gjtkh
+RETADR   RESW     1
+LENGTH   RESW     1
+BUFFER   RESB     4096
+BUFEND   EQU	  
+MAXLEN   EQU	  
+.
+.	SUBROUTINE TO READ RECORD
+RDREC    CLEAR    X
+         CLEAR    A
+         CLEAR    S
+        +LDT     #MAXLEN
+RLOOP    TD       INPUT
+         JEQ      RLOOP
+         RD       INPUT
+         COMPR    A,S
+         JEQ      EXIT
+         STCH     BUFFER,X
+         TIXR     T
+         JLT      RLOOP
+EXIT     STX      LENGTH
+         RSUB
+INPUT    BYTE     X'F1'
+.
+.	SUBROUTINE TO WRITE RECORD
+WRREC    CLEAR    X
+         LDT      LENGTH
+WLOOP    TD       =X'05'
+         JEQ      WLOOP
+         LDCH     BUFFER,X
+         WD       =X'05'
+         TIXR     T
+         JLT      WLOOP
+         RSUB
+         END

@@ -1,0 +1,44 @@
+# depslib dependency file v1.0
+1446667744 source:c:\users\dell\desktop\assembler\assemble.cpp
+	<iostream>
+
+1462721867 source:c:\users\dell\desktop\assembler\src\pass1.cpp
+	"Pass1.h"
+
+1462721932 c:\users\dell\desktop\assembler\include\pass1.h
+	<bits/stdc++.h>
+
+1462911431 source:e:\education\csed 18\2nd year - term 4\systems programming\project\assembler\src\pass1.cpp
+	"Pass1.h"
+
+1462814031 e:\education\csed 18\2nd year - term 4\systems programming\project\assembler\include\pass1.h
+	<bits/stdc++.h>
+
+1462878966 source:e:\education\csed 18\2nd year - term 4\systems programming\project\assembler\assemble.cpp
+	<iostream>
+	<algorithm>
+	<regex>
+	<string>
+	<string.h>
+	<fstream>
+	<vector>
+	<unordered_map>
+	"Pass1.h"
+
+1462911431 source:d:\college\2ndcomputer\2ndterm\codeblocks\assembler\src\pass1.cpp
+	"Pass1.h"
+
+1462814031 d:\college\2ndcomputer\2ndterm\codeblocks\assembler\include\pass1.h
+	<bits/stdc++.h>
+
+1462912984 source:d:\college\2ndcomputer\2ndterm\codeblocks\assembler\assemble.cpp
+	<iostream>
+	<algorithm>
+	<regex>
+	<string>
+	<string.h>
+	<fstream>
+	<vector>
+	<unordered_map>
+	"Pass1.h"
+
